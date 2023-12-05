@@ -1,5 +1,7 @@
 # Proiect PSSC
 
+https://github.com/diercan/Laborator-PSSC
+
 Implementarea unui sistem software pentru preluarea de comenzi, facturare și expediere. Fiecare echipa va alege cate un workflow din cele trei contexte pe care le va defini si implementa. Exemple de workflow-uri: preluare comanda, anulare comanda, modificare comanda, returnare comanda.
 
 Fiecare echipa va crea un proiect privat pe GitHub unde va pune codul sursa. La final se va urmării existența unui istoric din care să rezulte colaborarea între membrii echipei.
