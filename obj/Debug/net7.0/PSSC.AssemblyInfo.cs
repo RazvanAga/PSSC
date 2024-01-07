@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PSSC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1089695a01a06bf07723ffceb4a397e9eb40f82")]
 [assembly: System.Reflection.AssemblyProductAttribute("PSSC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PSSC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PSSC
-build_property.ProjectDir = C:\Users\Razvan\Desktop\PSSC-main\
+build_property.ProjectDir = C:\Users\Razvan\Desktop\PSSC\PSSC-main\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

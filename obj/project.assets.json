@@ -691,11 +691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Razvan\\Desktop\\PSSC-main\\PSSC.csproj",
+      "projectUniqueName": "C:\\Users\\Razvan\\Desktop\\PSSC\\PSSC-main\\PSSC.csproj",
       "projectName": "PSSC",
-      "projectPath": "C:\\Users\\Razvan\\Desktop\\PSSC-main\\PSSC.csproj",
+      "projectPath": "C:\\Users\\Razvan\\Desktop\\PSSC\\PSSC-main\\PSSC.csproj",
       "packagesPath": "C:\\Users\\Razvan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Razvan\\Desktop\\PSSC-main\\obj\\",
+      "outputPath": "C:\\Users\\Razvan\\Desktop\\PSSC\\PSSC-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Razvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
