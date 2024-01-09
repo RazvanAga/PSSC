@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Downloads\\PSSC-master\\PSSC-master\\PSSC.csproj": {}
+    "D:\\work\\AC\\An4\\PSSCProiect\\PSSC.csproj": {}
   },
   "projects": {
-    "D:\\Downloads\\PSSC-master\\PSSC-master\\PSSC.csproj": {
+    "D:\\work\\AC\\An4\\PSSCProiect\\PSSC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\PSSC-master\\PSSC-master\\PSSC.csproj",
+        "projectUniqueName": "D:\\work\\AC\\An4\\PSSCProiect\\PSSC.csproj",
         "projectName": "PSSC",
-        "projectPath": "D:\\Downloads\\PSSC-master\\PSSC-master\\PSSC.csproj",
-        "packagesPath": "C:\\Users\\aungu\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\PSSC-master\\PSSC-master\\obj\\",
+        "projectPath": "D:\\work\\AC\\An4\\PSSCProiect\\PSSC.csproj",
+        "packagesPath": "C:\\Users\\Iasmina\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\AC\\An4\\PSSCProiect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\aungu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iasmina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,30 +61,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using static PSSC_S3.StareCos;
 using static PSSC_S3.Cantitate;
-using PSSC;
 
 namespace PSSC_S3
 {
@@ -22,15 +21,9 @@ namespace PSSC_S3
             Produse.Add(produs2);
             Produse.Add(produs3);
 
-            StatusComanda statusInAsteptare = new StatusComanda(StareComanda.InAsteptare);
-            StatusComanda statusInProcesare = new StatusComanda(StareComanda.InProcesare);
-            StatusComanda statusFinalizata = new StatusComanda(StareComanda.Finalizata);
-            StatusComanda statusAnulata = new StatusComanda(StareComanda.Anulata);
-
-
-            PublicareComandaCommand command1 = new(client1, Produse, statusFinalizata);
-            PublicareComandaCommand command2 = new(client2, Produse, statusInAsteptare);
-            PublicareComandaCommand command3 = new(client3, Produse, statusInProcesare);
+            PublicareComandaCommand command1 = new(client1, Produse);
+            PublicareComandaCommand command2 = new(client2, Produse);
+            PublicareComandaCommand command3 = new(client3, Produse);
             PublicareComandaWorkflow workflow = new PublicareComandaWorkflow();
 
             var result1 = workflow.Execute(command1, (var) => true);

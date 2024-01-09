@@ -10,11 +10,11 @@ namespace PSSC_S3
     [AsChoice]
     public static partial class PublicareComandaEvent
     {
-        public interface IPublicareComandaEvent{ }
+        public interface IPublicareComandaEvent { }
 
-         public record ComandaPublicareSucceedEvent : IPublicareComandaEvent 
+        public record ComandaPublicareSucceedEvent : IPublicareComandaEvent
         {
-            public string Csv{ get;}
+            public string Csv { get; }
             public DateTime PublishedDate { get; }
 
             internal ComandaPublicareSucceedEvent(string csv, DateTime publishedDate)
@@ -24,7 +24,7 @@ namespace PSSC_S3
             }
         }
 
-        public record ComandaPublicareFailEvent : IPublicareComandaEvent 
+        public record ComandaPublicareFailEvent : IPublicareComandaEvent
         {
             public string Reason { get; }
 
