@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using static PSSC_S3.StareCos;
-using static PSSC_S3.Cantitate;
+using static PSSC_S3.Pret;
 
 namespace PSSC_S3
 {
@@ -9,12 +9,20 @@ namespace PSSC_S3
     {
         static void Main(string[] args)
         {
-            Produs produs1 = new Produs(new Cantitate.CantitateKg(2), "cod1", "paine");
-            Produs produs2 = new Produs(new Cantitate.CantitateUnitati(4), "cod2", "lapte");
-            Produs produs3 = new Produs(new Cantitate.CantitateKg(8), "cod3", "oua");
-            Client client1 = new Client("Razvan", "Aga", "420");
-            Client client2 = new Client("Andrei", "Aungurencei", "818");
-            Client client3 = new Client("Iasmina", "Iacob", "822");
+            
+
+            Produs produs1 = new Produs(new Pret.PretProdus(2), "p41n3", "paine");
+            Produs produs2 = new Produs(new Pret.PretProdus(4), "l4873", "lapte");
+            Produs produs3 = new Produs(new Pret.PretProdus(8), "0u4", "oua");
+            Client client1 = new Client("Razvan ", "Aga        ", "0753012509");
+            Client client2 = new Client("Andrei ", "Aungurencei", "0787311885");
+            Client client3 = new Client("Iasmina", "Iacob      ", "0768013858");
+
+            // Adăugați clienții folosind GestiuneClienti
+            GestiuneClienti gestiuneClienti = new GestiuneClienti();
+            gestiuneClienti.AdaugaClient(client1);
+            gestiuneClienti.AdaugaClient(client2);
+            gestiuneClienti.AdaugaClient(client3);
 
             List<Produs> Produse = new List<Produs>();
             Produse.Add(produs1);
@@ -39,26 +47,60 @@ namespace PSSC_S3
                 whenComandaPublicareSucceedEvent: @event =>
                 {
                     Console.WriteLine($"Publish succeeded.");
-                    Console.WriteLine(@event.Csv);
+                    Console.WriteLine("Meniu:");
+                    Console.WriteLine("1. Adaugare client nou");
+                    Console.WriteLine("2. Afisare toti clientii");
+                    Console.WriteLine("3. Iesire din meniu");
+
+                    int optiune;
+                    do
+                    {
+                        Console.Write("Alege o optiune (1-3): ");
+                        optiune = int.Parse(Console.ReadLine());
+
+                        switch (optiune)
+                        {
+                            case 1:
+                                // Adaugare client nou
+                                Console.Write("Introduceti numele clientului: ");
+                                string nume = Console.ReadLine();
+                                Console.Write("Introduceti prenumele clientului: ");
+                                string prenume = Console.ReadLine();
+                                Console.Write("Introduceti numarul de telefon al clientului: ");
+                                string cod = Console.ReadLine();
+
+                                Client clientNou = new Client(nume, prenume, cod);
+                                gestiuneClienti.AdaugaClient(clientNou);
+                                break;
+
+                            case 2:
+                                // Afisare toti clientii
+                                Console.WriteLine("Lista clientilor:");
+                                int index = 1;
+                                foreach (var client in gestiuneClienti.ObtineClienti())
+                                {
+                                    Console.WriteLine($"{index}. {client.nume} {client.prenume} {client.telefon}");
+                                    index++;
+                                }
+                                break;
+
+                            case 3:
+                                // Iesire din meniu
+                                Console.WriteLine("Iesire din meniu.");
+                                break;
+
+                            default:
+                                Console.WriteLine("Optiune invalida. Reincercati.");
+                                break;
+                        }
+
+                    } while (optiune != 3);
+
                     return @event;
                 }
             );
 
-            List<Produs> comandaClient = new List<Produs>();
-
-
-            foreach (var produs in Produse)
-            {
-                Console.Write($"Introduceti cantitatea pentru {produs.Denumire} ({produs.Cantitate.GetUnit()}): ");
-                int cantitateIntrodusa = int.Parse(Console.ReadLine());
-
-                // Crearea unui nou produs cu cantitatea actualizată și adăugarea acestuia la lista comenzii
-                Produs produsCuCantitateActualizata = produs.WithCantitate(new Cantitate.CantitateUnitati(cantitateIntrodusa));
-                comandaClient.Add(produsCuCantitateActualizata);
-            }
-
-            
-
+           
             Console.WriteLine("Final de program!");
         }
     }

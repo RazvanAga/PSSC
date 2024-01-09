@@ -1,8 +1,8 @@
 namespace PSSC_S3
 {
-    public record Produs(Cantitate.ICantitate Cantitate, string Cod, string Denumire)
+    public record Produs(Pret.IPret Pret, string Cod, string Denumire)
     {
-        public Produs WithCantitate(Cantitate.ICantitate cantitate) => this with { Cantitate = cantitate };
+        public Produs WithCantitate(Pret.IPret pret) => this with { Pret = pret };
     }
 
 }
